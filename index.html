@@ -233,6 +233,33 @@
         </div>
     </footer>
 
+    <!-- Debug Script -->
+    <script>
+        console.log('🚀 Klovia Web Solutions - Debug Script');
+        console.log('📁 Archivos cargando...');
+        console.log('⏰ Timestamp:', new Date().toISOString());
+        
+        // Verificar carga de recursos
+        window.addEventListener('load', function() {
+            console.log('✅ Página completamente cargada');
+            console.log('🎨 CSS cargado:', document.styleSheets.length > 0);
+            console.log('🖼️ Imágenes:', document.images.length);
+            console.log('⚡ Scripts:', document.scripts.length);
+        });
+        
+        // Detectar errores de red
+        window.addEventListener('error', function(e) {
+            console.error('❌ Error detectado:', e.message);
+            console.error('📍 Archivo:', e.filename);
+            console.error('📍 Línea:', e.lineno);
+        });
+        
+        // Timeout detection
+        setTimeout(function() {
+            console.log('⏱️ Timeout check - 5 segundos transcurridos');
+        }, 5000);
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
